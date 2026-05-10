@@ -405,8 +405,7 @@ local function apply_light_highlights()
 	hi("SpellCap", { sp = c.OldFaithfulDarkYellow, cterm = { undercurl = true }, undercurl = true })
 	hi("SpellLocal", { sp = c.OldFaithfulDarkGreen, cterm = { undercurl = true }, undercurl = true })
 	hi("SpellRare", { sp = c.OldFaithfulDarkCyan, cterm = { undercurl = true }, undercurl = true })
-	-- hi("Statement", { fg = c.OldFaithfulDarkGrey2, cterm = { bold = true }, bold = true })
-	hi("Statement", { fg = c.OldFaithfulLightMagenta, cterm = { bold = true }, bold = true })
+	hi("Statement", { fg = c.OldFaithfulDarkGrey2, cterm = { bold = true }, bold = true })
 	hi("StatusLine", { fg = c.OldFaithfulDarkGrey2, bg = c.OldFaithfulLightGrey4, cterm = { reverse = true } })
 	hi(
 		"StatusLineNC",
@@ -501,7 +500,7 @@ local function apply_dark_highlights()
 	hi("SpellCap", { sp = c.OldFaithfulLightYellow, cterm = { undercurl = true }, undercurl = true })
 	hi("SpellLocal", { sp = c.OldFaithfulLightGreen, cterm = { undercurl = true }, undercurl = true })
 	hi("SpellRare", { sp = c.OldFaithfulLightCyan, cterm = { undercurl = true }, undercurl = true })
-	hi("Statement", { fg = c.OldFaithfulLightMagenta, cterm = { bold = true }, bold = true })
+	hi("Statement", { fg = c.OldFaithfulLightGrey2, cterm = { bold = true }, bold = true })
 	hi("StatusLine", { fg = c.OldFaithfulLightGrey2, bg = c.OldFaithfulDarkGrey4, cterm = { reverse = true } })
 	hi(
 		"StatusLineNC",
