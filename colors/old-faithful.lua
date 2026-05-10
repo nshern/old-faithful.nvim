@@ -89,7 +89,7 @@ local function apply_common_highlights()
 	hi("Character", { link = "Constant" })
 	hi("ComplHint", { link = "NonText" })
 	hi("ComplHintMore", { link = "MoreMsg" })
-	hi("ComplMatchIns", {  })
+	hi("ComplMatchIns", {})
 	hi("Conditional", { link = "Statement" })
 	hi("CursorIM", { link = "Cursor" })
 	hi("CursorLineFold", { link = "FoldColumn" })
@@ -142,9 +142,9 @@ local function apply_common_highlights()
 	hi("LspReferenceWrite", { link = "LspReferenceText" })
 	hi("LspSignatureActiveParameter", { link = "Visual" })
 	hi("Macro", { link = "PreProc" })
-	hi("MsgArea", {  })
+	hi("MsgArea", {})
 	hi("MsgSeparator", { link = "StatusLine" })
-	hi("NormalNC", {  })
+	hi("NormalNC", {})
 	hi("Number", { link = "Constant" })
 	hi("NvimAnd", { link = "NvimBinaryOperator" })
 	hi("NvimArrow", { link = "Delimiter" })
@@ -309,13 +309,13 @@ local function apply_common_highlights()
 	hi("StatusLineTerm", { link = "StatusLine" })
 	hi("StatusLineTermNC", { link = "StatusLineNC" })
 	hi("StderrMsg", { link = "ErrorMsg" })
-	hi("StdoutMsg", {  })
+	hi("StdoutMsg", {})
 	hi("StorageClass", { link = "Type" })
 	hi("Structure", { link = "Type" })
 	hi("Substitute", { link = "Search" })
 	hi("TabLine", { link = "StatusLineNC" })
 	hi("TabLineFill", { link = "TabLine" })
-	hi("TabLineSel", { cterm = {  }, bold = true })
+	hi("TabLineSel", { cterm = {}, bold = true })
 	hi("Tag", { link = "Special" })
 	hi("TermCursor", { cterm = { reverse = true }, reverse = true })
 	hi("Typedef", { link = "Type" })
@@ -329,8 +329,22 @@ end
 
 -- Highlight groups from Neovim's light default.
 local function apply_light_highlights()
-	hi("@markup.heading.1.delimiter.vimdoc", { fg = c.OldFaithfulLightGrey2, bg = c.OldFaithfulLightGrey2, sp = c.OldFaithfulDarkGrey2, cterm = { underdouble = true, nocombine = true }, underdouble = true, nocombine = true })
-	hi("@markup.heading.2.delimiter.vimdoc", { fg = c.OldFaithfulLightGrey2, bg = c.OldFaithfulLightGrey2, sp = c.OldFaithfulDarkGrey2, cterm = { underline = true, nocombine = true }, underline = true, nocombine = true })
+	hi("@markup.heading.1.delimiter.vimdoc", {
+		fg = c.OldFaithfulLightGrey2,
+		bg = c.OldFaithfulLightGrey2,
+		sp = c.OldFaithfulDarkGrey2,
+		cterm = { underdouble = true, nocombine = true },
+		underdouble = true,
+		nocombine = true,
+	})
+	hi("@markup.heading.2.delimiter.vimdoc", {
+		fg = c.OldFaithfulLightGrey2,
+		bg = c.OldFaithfulLightGrey2,
+		sp = c.OldFaithfulDarkGrey2,
+		cterm = { underline = true, nocombine = true },
+		underline = true,
+		nocombine = true,
+	})
 	hi("@variable", { fg = c.OldFaithfulDarkGrey2 })
 	hi("Added", { fg = c.OldFaithfulDarkGreen, ctermfg = 22 })
 	hi("Changed", { fg = c.OldFaithfulDarkCyan, ctermfg = 30 })
@@ -391,9 +405,13 @@ local function apply_light_highlights()
 	hi("SpellCap", { sp = c.OldFaithfulDarkYellow, cterm = { undercurl = true }, undercurl = true })
 	hi("SpellLocal", { sp = c.OldFaithfulDarkGreen, cterm = { undercurl = true }, undercurl = true })
 	hi("SpellRare", { sp = c.OldFaithfulDarkCyan, cterm = { undercurl = true }, undercurl = true })
-	hi("Statement", { fg = c.OldFaithfulDarkGrey2, cterm = { bold = true }, bold = true })
+	-- hi("Statement", { fg = c.OldFaithfulDarkGrey2, cterm = { bold = true }, bold = true })
+	hi("Statement", { fg = c.OldFaithfulLightMagenta, cterm = { bold = true }, bold = true })
 	hi("StatusLine", { fg = c.OldFaithfulDarkGrey2, bg = c.OldFaithfulLightGrey4, cterm = { reverse = true } })
-	hi("StatusLineNC", { fg = c.OldFaithfulDarkGrey3, bg = c.OldFaithfulLightGrey3, cterm = { bold = true, underline = true } })
+	hi(
+		"StatusLineNC",
+		{ fg = c.OldFaithfulDarkGrey3, bg = c.OldFaithfulLightGrey3, cterm = { bold = true, underline = true } }
+	)
 	hi("String", { fg = c.OldFaithfulDarkGreen, ctermfg = 22 })
 	hi("Title", { fg = c.OldFaithfulDarkGrey2, cterm = { bold = true }, bold = true })
 	hi("Todo", { fg = c.OldFaithfulDarkGrey2, cterm = { bold = true }, bold = true })
@@ -407,8 +425,22 @@ end
 
 -- Highlight groups from Neovim's dark default.
 local function apply_dark_highlights()
-	hi("@markup.heading.1.delimiter.vimdoc", { fg = c.OldFaithfulDarkGrey2, bg = c.OldFaithfulDarkGrey2, sp = c.OldFaithfulLightGrey2, cterm = { underdouble = true, nocombine = true }, underdouble = true, nocombine = true })
-	hi("@markup.heading.2.delimiter.vimdoc", { fg = c.OldFaithfulDarkGrey2, bg = c.OldFaithfulDarkGrey2, sp = c.OldFaithfulLightGrey2, cterm = { underline = true, nocombine = true }, underline = true, nocombine = true })
+	hi("@markup.heading.1.delimiter.vimdoc", {
+		fg = c.OldFaithfulDarkGrey2,
+		bg = c.OldFaithfulDarkGrey2,
+		sp = c.OldFaithfulLightGrey2,
+		cterm = { underdouble = true, nocombine = true },
+		underdouble = true,
+		nocombine = true,
+	})
+	hi("@markup.heading.2.delimiter.vimdoc", {
+		fg = c.OldFaithfulDarkGrey2,
+		bg = c.OldFaithfulDarkGrey2,
+		sp = c.OldFaithfulLightGrey2,
+		cterm = { underline = true, nocombine = true },
+		underline = true,
+		nocombine = true,
+	})
 	hi("@variable", { fg = c.OldFaithfulLightGrey2 })
 	hi("Added", { fg = c.OldFaithfulLightGreen, ctermfg = 41 })
 	hi("Changed", { fg = c.OldFaithfulLightCyan, ctermfg = 44 })
@@ -469,9 +501,12 @@ local function apply_dark_highlights()
 	hi("SpellCap", { sp = c.OldFaithfulLightYellow, cterm = { undercurl = true }, undercurl = true })
 	hi("SpellLocal", { sp = c.OldFaithfulLightGreen, cterm = { undercurl = true }, undercurl = true })
 	hi("SpellRare", { sp = c.OldFaithfulLightCyan, cterm = { undercurl = true }, undercurl = true })
-	hi("Statement", { fg = c.OldFaithfulLightGrey2, cterm = { bold = true }, bold = true })
+	hi("Statement", { fg = c.OldFaithfulLightMagenta, cterm = { bold = true }, bold = true })
 	hi("StatusLine", { fg = c.OldFaithfulLightGrey2, bg = c.OldFaithfulDarkGrey4, cterm = { reverse = true } })
-	hi("StatusLineNC", { fg = c.OldFaithfulLightGrey3, bg = c.OldFaithfulDarkGrey3, cterm = { bold = true, underline = true } })
+	hi(
+		"StatusLineNC",
+		{ fg = c.OldFaithfulLightGrey3, bg = c.OldFaithfulDarkGrey3, cterm = { bold = true, underline = true } }
+	)
 	hi("String", { fg = c.OldFaithfulLightGreen, ctermfg = 41 })
 	hi("Title", { fg = c.OldFaithfulLightGrey2, cterm = { bold = true }, bold = true })
 	hi("Todo", { fg = c.OldFaithfulLightGrey2, cterm = { bold = true }, bold = true })
@@ -509,4 +544,3 @@ vim.g.terminal_color_12 = c.OldFaithfulLightBlue
 vim.g.terminal_color_13 = c.OldFaithfulLightMagenta
 vim.g.terminal_color_14 = c.OldFaithfulLightCyan
 vim.g.terminal_color_15 = "#ffffff"
-
